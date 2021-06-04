@@ -1,0 +1,101 @@
+<!--start of html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* style tag begins */
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      ;
+    }
+
+    meter {
+      /*styling meter to align with text field*/
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  <!--style tag ends-->
+  <!--making a division for logo and title-->
+  <div class="topnav" id="myTopnav">
+    <img src="aegis_logo.png" alt="logo" class="logo">
+  </div>
+  <!--end of logo and title division-->
+  <meta charset="UTF-8" />
+  <!--character set encoding specified-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Aegis Password Strength Checker</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!--styling and meter-->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!--google fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body style="background-color:#6db0a7">
+  <!--making a container with form-->
+  <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-md-7">
+          </br></br></br></br></br>
+          <form class="bg-white rounded shadow-5-strong p-5">
+            <!--logo text-->
+            <center>
+              <p>
+                <style="font-size:0.5 rem;">Aegis Password Strength Checker
+                  </style>
+              </p>
+            </center>
+            <!--logo text end-->
+            <!--input container-->
+            <div class="form-outline mb-6 input-container">
+
+              <!--user input -->
+              <input type="password" id="password" class="form-control" />
+              <label class="form-label" for="password">Password</label>
+              <!--font awesome eye for show/hide password-->
+              <i id="togglePassword" class="fas fa-eye eyeicon"></i>
+            </div>
+            </br>
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-6">
+
+              <!--password strength level tag-->
+              <div id="strength-level" class="text-center">
+              </div>
+              <!--warning tag-->
+              <div id="warning" class="text-center">
+              </div>
+              <!--suggestion tag-->
+              <div id="suggestion" class="text-center">
+              </div>
+            </div>
+            </br>
+            <!--meter tag for the password strength level-->
+            <meter max="4" id="password-strength"></meter>
+            </br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--importing MDB, zxcvbn and password script js files-->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/zxcvbn.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+<!--end of body-->
+
+</html>
+<!--end of html-->
